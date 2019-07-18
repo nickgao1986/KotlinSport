@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tv_title.text = "hello kotlin"
-        tv_title.textSize = 30f
+        tv_title.textSize = 35f
     }
 }
