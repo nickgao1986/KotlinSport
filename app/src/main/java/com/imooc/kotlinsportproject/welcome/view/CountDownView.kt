@@ -4,20 +4,14 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ValueAnimator
-import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
-import android.os.Build
-import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
-import android.view.animation.LinearInterpolator
-import com.imooc.basemodule.base.Util
+import com.imooc.basemodule.util.Util
 import com.imooc.kotlinsportproject.R
-import com.imooc.kotlinsportproject.welcome.WelcomeActivity
 
 
 class CountDownView @JvmOverloads constructor(

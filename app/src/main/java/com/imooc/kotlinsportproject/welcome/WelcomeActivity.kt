@@ -1,5 +1,6 @@
 package com.imooc.kotlinsportproject.welcome
 
+import android.Manifest
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
@@ -7,7 +8,10 @@ import android.animation.ObjectAnimator
 import android.os.Bundle
 import com.imooc.basemodule.base.BaseActivity
 import com.imooc.kotlinsportproject.R
+import com.imooc.kotlinsportproject.guide.SetAvatarActivity
+import com.tbruyelle.rxpermissions2.RxPermissions
 import kotlinx.android.synthetic.main.pedo_welcome_layout.*
+import org.jetbrains.anko.startActivity
 
 class WelcomeActivity :BaseActivity() {
 
@@ -29,6 +33,7 @@ class WelcomeActivity :BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         startAnimation()
+        addRxPermission()
     }
 
     fun startAnimation() {
@@ -45,10 +50,32 @@ class WelcomeActivity :BaseActivity() {
         set.addListener(object :AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator?) {
                 super.onAnimationEnd(animation)
-
-            }
+                startActivity<SetAvatarActivity>()            }
         })
 
         counter_down_view.start()
+        counter_down_view.setOnClickListener{
+            startActivity<SetAvatarActivity>()
+        }
     }
+
+    private fun addRxPermission() {
+        val rxPermissions = RxPermissions(this) // where this is an Activity instance
+        rxPermissions
+            .requestEach(
+                Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+            .subscribe { permission ->
+                if (permission.granted) {
+
+                } else if (permission.shouldShowRequestPermissionRationale) {
+
+                } else {
+
+
+                }
+            }
+
+    }
+
 }

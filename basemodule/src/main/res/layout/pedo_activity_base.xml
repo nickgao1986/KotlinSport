@@ -8,7 +8,8 @@
             android:id="@+id/actionbar_title"
             android:inflatedId="@+id/actionbar_title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:layout="@layout/pedo_actionbar"/>
 
      <RelativeLayout
              android:id="@+id/body"

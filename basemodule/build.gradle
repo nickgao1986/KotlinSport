@@ -35,4 +35,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api "io.reactivex.rxjava2:rxandroid:$rxjava2_version"
+    api "io.reactivex.rxjava2:rxjava:$rxjava2_version"
+    api "com.tbruyelle.rxpermissions2:rxpermissions:$rxpermission_version"
+
+    // Anko Commons
+    api "com.facebook.fresco:fresco:$fresco_version"
+    api "org.jetbrains.anko:anko-commons:$anko_version"
+    api "com.github.nickgao1986:NicksBaseLib:$baselib_version"
+    //Alert View
+    api "com.bigkoo:alertview:${alert_view_version}"
 }
