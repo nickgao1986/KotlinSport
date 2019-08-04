@@ -3,7 +3,6 @@
           package="com.imooc.kotlinsportproject">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
     <application
             android:name=".SportApplication"
             android:allowBackup="true"
@@ -20,18 +19,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".guide.SetAvatarActivity"/>
+        <activity android:name=".guide.SetAvatartActivity"/>
 
         <activity android:name=".guide.PedoCropImageActivity"/>
-
-        <provider
-                android:name="android.support.v4.content.FileProvider"
-                android:authorities="${applicationId}.fileprovider"
-                android:exported="false"
-                android:grantUriPermissions="true">
-            <meta-data
-                    android:name="android.support.FILE_PROVIDER_PATHS"
-                    android:resource="@xml/provider_paths" />
+        <provider android:authorities="${applicationId}.fileprovider"
+                  android:name="android.support.v4.content.FileProvider"
+                  android:exported="false"
+                  android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths"></meta-data>
         </provider>
 
     </application>

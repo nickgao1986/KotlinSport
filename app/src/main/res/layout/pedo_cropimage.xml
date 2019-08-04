@@ -1,59 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-    <com.images.ClipLayout
-            android:id="@+id/clip_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <com.images.ClipLayout android:id="@+id/clip_layout"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"/>
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/clip_layout"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="@dimen/crop_image_title_margin_top"
-            android:background="@null"
-            android:text="移动选择图片"
-            android:textColor="#ffffffff"
-            android:textSize="@dimen/crop_image_text_size">
-    </TextView>
+              android:id="@+id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="35dp"
+              android:textColor="#ffffff"
+              android:text="移动选择图片"
+              android:textSize="18dp"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"/>
 
-    <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/clip_layout"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginBottom="@dimen/crop_image_bottom_margin"
-            android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
 
-        <Button
-                android:id="@+id/discard"
+            <Button android:id="@+id/discard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:background="@null"
+                    android:text="Cancel"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"/>
+
+        <Button android:id="@+id/save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
                 android:background="@null"
-                android:text="cancel"
-                android:textColor="#ffffffff"
-                android:textSize="@dimen/crop_image_text_size"/>
+                android:text="Cancel"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
 
-        <Button
-                android:id="@+id/save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:background="@null"
-                android:text="choose"
-                android:textColor="#ffffffff"
-                android:textSize="@dimen/crop_image_text_size"/>
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

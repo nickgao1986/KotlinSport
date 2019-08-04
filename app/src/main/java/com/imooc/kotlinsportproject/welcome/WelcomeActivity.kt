@@ -8,10 +8,13 @@ import android.animation.ObjectAnimator
 import android.os.Bundle
 import com.imooc.basemodule.base.BaseActivity
 import com.imooc.kotlinsportproject.R
-import com.imooc.kotlinsportproject.guide.SetAvatarActivity
+import com.imooc.kotlinsportproject.guide.SetAvatartActivity
 import com.tbruyelle.rxpermissions2.RxPermissions
 import kotlinx.android.synthetic.main.pedo_welcome_layout.*
 import org.jetbrains.anko.startActivity
+
+
+
 
 class WelcomeActivity :BaseActivity() {
 
@@ -33,7 +36,7 @@ class WelcomeActivity :BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         startAnimation()
-        addRxPermission()
+        addPermission()
     }
 
     fun startAnimation() {
@@ -50,32 +53,27 @@ class WelcomeActivity :BaseActivity() {
         set.addListener(object :AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator?) {
                 super.onAnimationEnd(animation)
-                startActivity<SetAvatarActivity>()            }
+                       }
         })
 
         counter_down_view.start()
         counter_down_view.setOnClickListener{
-            startActivity<SetAvatarActivity>()
+            startActivity<SetAvatartActivity>()
         }
     }
 
-    private fun addRxPermission() {
-        val rxPermissions = RxPermissions(this) // where this is an Activity instance
+    fun addPermission() {
+        var rxPermissions = RxPermissions(this)
         rxPermissions
-            .requestEach(
-                Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE
-            )
-            .subscribe { permission ->
-                if (permission.granted) {
-
-                } else if (permission.shouldShowRequestPermissionRationale) {
-
+            .request(Manifest.permission.CAMERA,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .subscribe { granted ->
+                if (granted) { // Always true pre-M
+                    // I can control the camera now
                 } else {
-
-
+                    // Oups permission denied
                 }
             }
-
     }
 
 }
