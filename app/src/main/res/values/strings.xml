@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">KotlinSportProject</string>
+    <string name="set_height">设置身高</string>
+    <string name="set_weight">设置体重</string>
+    <string name="set_step">设定每日目标</string>
 </resources>

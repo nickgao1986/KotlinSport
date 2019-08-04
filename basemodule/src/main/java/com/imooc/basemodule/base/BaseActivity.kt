@@ -2,13 +2,11 @@ package com.imooc.basemodule.base
 
 import android.app.Activity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewStub
-import android.widget.RelativeLayout
 import com.imooc.basemodule.R
 
 abstract class BaseActivity:AppCompatActivity(), PedoActionBar.ActionBarListener{
@@ -59,4 +57,6 @@ abstract class BaseActivity:AppCompatActivity(), PedoActionBar.ActionBarListener
     }
 
 
+    override fun onLeftButtonClick() {
+    }
 }

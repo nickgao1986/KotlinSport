@@ -1,22 +1,24 @@
 package com.imooc.kotlinsportproject.guide
 
 import android.app.Activity
-import android.os.Bundle
-import com.imooc.basemodule.base.BaseActivity
-import com.imooc.kotlinsportproject.R
-import kotlinx.android.synthetic.main.pedo_set_avatar_layout.*
-import android.widget.Toast
-import com.bigkoo.alertview.AlertView
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
+import com.bigkoo.alertview.AlertView
 import com.bigkoo.alertview.OnItemClickListener
 import com.facebook.drawee.backends.pipeline.Fresco
+import com.imooc.basemodule.base.BaseActivity
 import com.imooc.basemodule.util.GlobalCont
 import com.imooc.basemodule.util.Util
+import com.imooc.basemodule.util.ext.onClick
 import com.imooc.kotlinsportproject.BuildConfig
+import com.imooc.kotlinsportproject.R
+import com.imooc.sport.guide.activity.SetBirthDayActivity
+import kotlinx.android.synthetic.main.pedo_set_avatar_layout.*
+import org.jetbrains.anko.startActivity
 import java.io.File
 
 
@@ -36,6 +38,10 @@ class SetAvatartActivity:BaseActivity() {
         super.onCreate(savedInstanceState)
         iv_set_avatar.setOnClickListener{
             showDialog()
+        }
+
+        btn.onClick{
+            startActivity<SetBirthDayActivity>()
         }
     }
 
