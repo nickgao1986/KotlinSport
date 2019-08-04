@@ -1,12 +1,14 @@
-package com.imooc.sport.guide.activity
+package com.imooc.kotlinsportproject.guide
 
 import android.graphics.Typeface
 import android.os.Bundle
 import com.fourmob.datetimepicker.date.NumberPicker
 import com.fourmob.datetimepicker.date.TextPickerDialogUtil
 import com.imooc.basemodule.base.BaseActivity
+import com.imooc.basemodule.util.ext.onClick
 import com.imooc.kotlinsportproject.R
 import kotlinx.android.synthetic.main.pedo_height_and_weight_layout.*
+import org.jetbrains.anko.startActivity
 import java.util.*
 
 class SetHeightAndWeightActivity : BaseActivity() {
@@ -31,10 +33,11 @@ class SetHeightAndWeightActivity : BaseActivity() {
         weight.typeface = Typeface.createFromAsset(mContext.assets, "fonts/PingFang-SC-Semibold.ttf")
 
 
-        set_height.setOnClickListener { showSetHeightDialog() }
+        set_height.onClick { showSetHeightDialog() }
         set_weight.setOnClickListener { showSetWeightDialog() }
 
         btn.setOnClickListener {
+            startActivity<GuideChooseItemActivity>()
         }
 
     }

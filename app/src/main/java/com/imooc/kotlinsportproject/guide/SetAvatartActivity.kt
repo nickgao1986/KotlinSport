@@ -16,7 +16,6 @@ import com.imooc.basemodule.util.Util
 import com.imooc.basemodule.util.ext.onClick
 import com.imooc.kotlinsportproject.BuildConfig
 import com.imooc.kotlinsportproject.R
-import com.imooc.sport.guide.activity.SetBirthDayActivity
 import kotlinx.android.synthetic.main.pedo_set_avatar_layout.*
 import org.jetbrains.anko.startActivity
 import java.io.File

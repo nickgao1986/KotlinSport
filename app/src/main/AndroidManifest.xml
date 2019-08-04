@@ -23,9 +23,10 @@
 
         <activity android:name=".guide.SetAvatartActivity"/>
 
-        <activity android:name="com.imooc.sport.guide.activity.SetBirthDayActivity"/>
+        <activity android:name=".guide.SetBirthDayActivity"/>
 
-        <activity android:name="com.imooc.sport.guide.activity.SetHeightAndWeightActivity"/>
+        <activity android:name=".guide.GuideChooseItemActivity"/>
+        <activity android:name=".guide.SetHeightAndWeightActivity"/>
 
         <activity android:name=".guide.PedoCropImageActivity"/>
         <provider android:authorities="${applicationId}.fileprovider"

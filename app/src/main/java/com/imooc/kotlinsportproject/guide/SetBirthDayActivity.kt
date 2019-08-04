@@ -1,4 +1,4 @@
-package com.imooc.sport.guide.activity
+package com.imooc.kotlinsportproject.guide
 
 import android.graphics.Typeface
 import android.os.Bundle

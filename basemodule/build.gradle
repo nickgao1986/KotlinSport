@@ -45,6 +45,8 @@ dependencies {
     api "io.reactivex.rxjava2:rxjava:$rxjava2_version"
     api "com.tbruyelle.rxpermissions2:rxpermissions:$rxpermission_version"
 
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
     //Alert View
     api "com.bigkoo:alertview:${alert_view_version}"
 
