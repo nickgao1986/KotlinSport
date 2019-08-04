@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:background="@null"
-                android:text="Cancel"
+                android:text="Save"
                 android:textColor="#ffffff"
                 android:textSize="18dp"/>
 

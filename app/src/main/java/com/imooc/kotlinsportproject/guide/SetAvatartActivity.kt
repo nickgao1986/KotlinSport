@@ -102,6 +102,8 @@ class SetAvatartActivity:BaseActivity() {
             imagePipeLine.evictFromCache(Uri.parse(GlobalCont.AVATAR_PATH_URI))
 
             iv_set_avatar.setImageURI(GlobalCont.AVATAR_PATH_URI)
+
+            UploadQiniu.uploadToQiniu(GlobalCont.AVATAR_PATH)
         }
     }
 

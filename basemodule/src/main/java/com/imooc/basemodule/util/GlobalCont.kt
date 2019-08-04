@@ -17,9 +17,9 @@ class GlobalCont{
 
          val AVATAR_PATH = "/sdcard/rc.jpg"
 
-         val accessKey = "k6NDEEAHYyp9Cr9zyepv8ZOpINq3uihsmFdZm2up";
+         val accessKey = "S0c_BVQR6qbY7_2WfI8jC2Wtm8lfES7SEDHZIcka";
 
-         val secretKey = "Pp0tjXXQr-n2Ub102A3AUlf3tQN4lKS48Qh-LzEn"
+         val secretKey = "qwi-GREQZCa83lJKU1vkTZeUWgLkJuAHE16x7d-f"
 
          val qiNiuStorePath = "http://http://cdn.php520.com/"
 

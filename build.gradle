@@ -5,7 +5,7 @@ buildscript {
     ext.anko_version = '0.10.1'
     ext.alert_view_version = "1.0.3"
     ext.fresco_version = "1.8.0"
-    ext.baselib_version = "5.0"
+    ext.baselib_version = "9.0"
     ext.rxpermission_version = "0.9.5@aar"
     ext.rxjava2_version = "2.0.1"
     repositories {
